@@ -426,36 +426,9 @@ def demonstrate_operation_counting():
             'speedup': ratio
         })
     
-    # Summary
-    print("="*80)
-    print("KEY INSIGHTS")
-    print("="*80)
-    print("""
-1. OPERATION COUNT vs RUNTIME:
-   - Simulated quantum computers are SLOW (classical simulation overhead)
-   - Real quantum computers perform operations in fundamentally different way
-   - We compare OPERATION COUNTS, not execution time
-
-2. COMPLEXITY MATTERS FOR LARGE N:
-   - Small N: Quantum overhead dominates
-   - Large N (cryptographic): Quantum advantage is exponential
-   - Crossover point depends on hardware
-
-3. WHAT WE'RE REALLY COMPARING:
-   - Classical: Must check up to N values (O(N) operations)
-   - Quantum: Uses superposition + interference (O(log³ N) operations)
-   - For N=2^2048 (RSA): Classical=2^2048, Quantum≈2048³≈8 billion
-
-4. WHY SIMULATION IS MISLEADING:
-   - Simulating each quantum operation requires classical computation
-   - Real quantum hardware would execute gates in parallel
-   - This demo shows the ALGORITHM works, not real performance
-""")
 
 if __name__ == "__main__":
     print("\n" + "="*80)
-    print("VALID SHOR'S ALGORITHM SIMULATION")
-    print("Focusing on Theoretical Complexity, Not Runtime")
     print("="*80)
     
     # Show operation counting
@@ -468,8 +441,3 @@ if __name__ == "__main__":
     # Show additional analysis
     print("\nGenerating extended analysis plots...")
     plot_additional_analysis()
-    
-    print("\n" + "="*80)
-    print("CONCLUSION: Quantum computers provide exponential speedup")
-    print("for factoring large numbers, but only on real quantum hardware!")
-    print("="*80)
